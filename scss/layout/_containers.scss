@@ -1,0 +1,21 @@
+/***************
+GENERAL
+***************/
+
+#search_text {
+	@include mobile {
+		display: block;
+		height: 35px;
+		border-radius: 10px;
+		border: none;
+		margin: 10px auto;
+		width: 80%;
+	}
+	@include tablet {
+		width: 50%;
+	}
+}
+
+#search_text:focus {
+	border: 3px solid $blue;
+}

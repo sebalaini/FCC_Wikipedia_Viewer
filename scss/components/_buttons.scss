@@ -1,0 +1,19 @@
+/***************
+BUTTON
+***************/
+
+.btn {
+	display: inline-block;
+	margin: 5px;
+	font-size: 1.1em;
+	color: $white;
+	background: $blue;
+	border: none;
+	border-radius: 10px;
+	width: 110px;
+	height: 35px;
+}
+
+.btn:hover {
+	background: $darkenblue;
+}
