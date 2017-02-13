@@ -2,6 +2,11 @@
 GENERAL
 ***************/
 
+#wrapper {
+	max-width: 1200px;
+	margin: 2px auto;
+}
+
 #search_text {
 	@include mobile {
 		display: block;
@@ -18,4 +23,17 @@ GENERAL
 
 #search_text:focus {
 	border: 3px solid $blue;
+}
+
+.result {
+	margin: 50px auto 10px;
+}
+
+.result_title {
+	margin: 30px auto 5px;
+}
+
+
+.result_p {
+	margin: 5px auto;
 }
