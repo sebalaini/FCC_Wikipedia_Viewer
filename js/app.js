@@ -62,11 +62,10 @@ function showError(keyword) {
 
 $("#search").click(function(event) {
 	event.preventDefault();
-	var keyword = $(".search_text").val();
+	var keyword = $("#search_text").val();
 
 	if (keyword !== "") {
-		$(".search_text").val(keyword);
-		$(".search_text").val("");
+		$("#search_text").val("");
 		ajax(keyword);
 	} else {
 		alert("Enter a keyword into the search box");
