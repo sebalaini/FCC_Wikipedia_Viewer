@@ -3,6 +3,6 @@ BUTTON
 ***************/
 
 $white: #fff;
-$darkblue: #1e66aa;
 $blue: #478dce;
-$darkenblue: darken($blue, 15%);
+$darkblue: #1e66aa;
+$darkenblue: darken( $blue, 20% )
