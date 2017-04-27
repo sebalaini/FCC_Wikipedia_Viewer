@@ -1,11 +1,6 @@
 /***************
-GENERAL
+SEARCH
 ***************/
-
-#wrapper {
-	max-width: 1200px;
-	margin: 2px auto;
-}
 
 #search_text {
 	@include mobile {
@@ -25,15 +20,39 @@ GENERAL
 	border: 3px solid $blue;
 }
 
+
+
+/***************
+RESULT
+***************/
+
 .result {
-	margin: 50px auto 10px;
+	margin: 30px auto 10px;
+	padding: 20px;
 }
 
-.result_title {
-	margin: 30px auto 5px;
+.result-list {
+	margin: 20px auto;
+	border-radius: 10px;
+	background-color:rgba(180, 180, 180, 0.6)
+}
+
+.result-list span {
+	display: inline-block;
+}
+
+.result-title,
+.result-snippet,
+.result-metadata {
+	margin-bottom: 10px;
+}
+
+.result-title {
+	margin-top: 10px;
+	font-size: 1.05em;
+	font-weight: bold;
 }
 
 
-.result_p {
-	margin: 5px auto;
-}
+
+
