@@ -42,42 +42,42 @@ function showResults(search) {
 
 
 	// FOR LOOP FOR RESULT
-	for (var m = 0; m <= 9; m++) {
-		var title = search.query.search[m].title;
+	for (var j = 0; j <= 9; j++) {
+		var title = search.query.search[j].title;
 		var url = title.replace(/ /g, "_");
-		var timestamp = search.query.search[m].timestamp;
+		var timestamp = search.query.search[j].timestamp;
 		timestamp = new Date(timestamp);
-		$(".title-" + m).html("<a href='https://en.wikipedia.org/wiki/" + url + "' target='_blank'>" + search.query.search[m].title + "</a>");
-		$(".snippet-" + m).html(search.query.search[m].snippet);
-		$(".metadata-" + m).html((search.query.search[m].size/1000).toFixed(0) + "kb (" + search.query.search[m].wordcount + " words) - " + timestamp);
+		$(".title-" + j).html("<a href='https://en.wikipedia.org/wiki/" + url + "' target='_blank'>" + search.query.search[j].title + "</a>");
+		$(".snippet-" + j).html(search.query.search[j].snippet);
+		$(".metadata-" + j).html((search.query.search[j].size/1000).toFixed(0) + "kb (" + search.query.search[j].wordcount + " words) - " + timestamp);
 	}
 }
 
-
+// ERROR FUNCTION
 function showError(keyword) {
-	$(".result").append( "<div class='error'> <p>Your search <span class='keyword'>" + keyword + "</span> did not match any documents.</p> <p>Suggestions:</p><li>Make sure that all words are spelled correctly.</li><li>Try different keywords.</li><li>Try more general keywords.</li></div> ");
+	$(".result").append( "<div class='error'> <p>Your search <span class='keyword'>" + keyword + "</span> did not match any documents.</p> <p>Suggestions:</p><ul><li>Make sure that all words are spelled correctly.</li><li>Try different keywords.</li><li>Try more general keywords.</li></ul></div>");
 }
 
 
-
+// CLICK EVENT 
 $("#search").click(function(event) {
 	event.preventDefault();
-	var keyword = $(".search_text").val();
+	var keyword = $("#search_text").val();
 
 	if (keyword !== "") {
-		$(".search_text").val(keyword);
-		$(".search_text").val("");
+		$("#search_text").val("");
 		ajax(keyword);
 	} else {
 		alert("Enter a keyword into the search box");
 	}
 	
-});
+}); // end click search
 
-  
-//Key press enter on text area..  
+
+// KEYPRESS FUNCTION  
 	$("#search_text").keypress(function(e) {
     if(e.which == 13) {
+    	event.preventDefault();
     	$("#search").click();
     }
 	}); //end enter function
