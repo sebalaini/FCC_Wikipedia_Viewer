@@ -31,7 +31,8 @@ RESULT
 	padding: 20px;
 }
 
-.result-list {
+.result-list,
+.error {
 	margin: 20px auto;
 	border-radius: 10px;
 	background-color:rgba(180, 180, 180, 0.6)
@@ -51,6 +52,28 @@ RESULT
 	margin-top: 10px;
 	font-size: 1.05em;
 	font-weight: bold;
+}
+
+
+
+/***************
+ERROR
+***************/
+
+.error {
+	padding: 10px 10px 20px;
+}
+
+ul {
+	max-width: 380px;
+	margin: 0 auto;
+	padding-left: 22px;
+	text-align: center;
+}
+
+li {
+	width: auto;
+	margin: 5px 0;
 }
 
 
