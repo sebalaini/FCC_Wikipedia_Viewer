@@ -7,7 +7,7 @@ SEARCH
 		display: block;
 		height: 35px;
 		border-radius: 10px;
-		border: none;
+		border: 2px solid $blue;
 		margin: 10px auto;
 		width: 80%;
 	}
@@ -16,8 +16,51 @@ SEARCH
 	}
 }
 
-#search_text:focus {
-	border: 3px solid $blue;
+#search_text:focus,
+#search_text:hover {
+	border: 3px solid $white;
+	background-color: $blue;
+	color: $white;
+}
+
+#search_text::-webkit-input-placeholder, { /* WebKit, Blink, Edge */
+  color: $blue;
+}
+
+#search_text:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: $blue;
+  opacity:  1;
+}
+
+#search_text::-moz-placeholder{ /* Mozilla Firefox 19+ */
+  color: $blue;
+  opacity:  1;
+}
+
+#search_text:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: $blue;
+}
+
+#search_text:focus::-webkit-input-placeholder,
+#search_text:hover::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color: $white;
+}
+
+#search_text:focus:-moz-placeholder,
+#search_text:hover:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: $white;
+  opacity:  1;
+}
+
+#search_text:focus::-moz-placeholder,
+#search_text:hover::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: $white;
+  opacity:  1;
+}
+
+#search_text:focus:-ms-input-placeholder,
+#search_text:hover:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: $white;
 }
 
 
